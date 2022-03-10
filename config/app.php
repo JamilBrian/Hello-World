@@ -162,6 +162,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        //Collective\Html\HtmlServiceProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -230,6 +232,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        //'Form' => Collective\Html\FormFacade::class,
+        //'HTML' => Collective\Html\HtmlFacade::class,
 
     ],
 

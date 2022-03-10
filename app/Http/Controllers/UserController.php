@@ -329,7 +329,6 @@ class UserController extends Controller
     public function sales()
     {
         
-        
 
         if(isset($_GET['start_date']) && isset($_GET['end_date'])){
             $start_date = $_GET['start_date'];
@@ -359,7 +358,14 @@ class UserController extends Controller
             $orders = Order::whereDate('created_at', Carbon::now())->get();
             $sum = Order::whereDate('created_at', Carbon::today())->sum('total');
         }
-        return view('admin.sales',compact('orders','sum'));
+
+        $years = [];
+
+            for ($year=2022; $year <= 2050; $year++) $years[$year] = $year;
+        
+        return view('admin.sales',compact('orders','sum','years'));
+
+        
     }
 
 

@@ -119,6 +119,14 @@
                   </table>
                   <h3>Total: P {{number_format($sum, 2, '.', ' ')}}</h3>
 
+                  <div>
+                    <select name="year">
+                      <option value="">Select Year</option>
+                      @foreach($years as $year)
+                        <option value="{{ $year }}">{{ $year }}</option>
+                      @endforeach
+                    </select>
+                  </div>
                   <a href="{{ url('invoice') }}" class="btn btn-danger">Generate PDF</a>
 
                   
